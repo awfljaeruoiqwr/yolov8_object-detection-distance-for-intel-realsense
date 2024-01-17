@@ -39,7 +39,8 @@ while True:
             cv2.rectangle(annotated_frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
             cv2.putText(annotated_frame, f"{distance:.2f}.m", (int(center_x), int(center_y)), cv2.FONT_HERSHEY_DUPLEX, 1.0,
             (0, 255, 0), 2)
-            cv2.putText(annotated_frame, f"number of people:{person_count}", (370, 20), cv2.FONT_HERSHEY_DUPLEX, 0.8, (0, 255, 0), 1)
+            
+    cv2.putText(annotated_frame, f"number of people:{person_count}", (370, 20), cv2.FONT_HERSHEY_DUPLEX, 0.8, (0, 255, 0), 1)
 
     cv2.imshow('yolov8', annotated_frame)
     if cv2.waitKey(1) & 0xFF == ord('q') or cv2.waitKey(1) & 0xFF == 27:
